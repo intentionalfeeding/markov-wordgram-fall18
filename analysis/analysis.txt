@@ -1,4 +1,4 @@
-YOUR NAME and YOUR NETID
+Russell Meng xm21
 
 Run WordGramDiver for wordgrams of size 2-10 and record
 the number of WordGram values/objects that occur more than
@@ -15,12 +15,12 @@ values of WSIZE
 WSIZE    # duplicates
 2        60,453
 3        10,756
-4
-5
-7
-8
-9
-10
+4         1,987
+5           667
+7           226
+8           151
+9           105
+10           73
 
 =====
 Explain in your own words the conceptual differences between 

@@ -30,10 +30,16 @@ Answer these questions:
 (1) Why the results of these methods should be the same in 
 terms of changes made to the HashSet parameter.
 
+Because the first one simply made a WordGram of the given size down through every word(using it as the first word in the WordGram) in the file and put the WordGram into the set, while the second one only made one WordGram, using the shiftAdd method to push the fixed-size WordGram down 1 string to make the WordGram become the corresponding next one in the first method and put it into the set.
+
 (2) What are the conceptual differences between the two
 benchmarking methods
+
+In order to read all the WordGrams of the file, the benchmark method creates words.length-wsize+1 WordGrams and put them into the set; The benchmarkShift method creates only one WordGram object, and uses shiftAdd to update the WordGram and then put every updated WordGram into the set
 
 (3) Is the total amount of memory allocated for arrays
 the same or different in the two methods? Account for
 arrays created in the methods and arrays created by
 WordGram objects. Try to be quantitative in answering.
+
+No, the benchmarkShift method requires memory considerably smaller than the benchmark method, since it only makes 1 WordGram object whereas the benchmark method makes words.length-wsize+1 WordGrams. Consider every WordGram takes up the same amount of memory, the memory required for the benchmarkShift process is 1/(words.length-wsize+1) of the benchmark method.
